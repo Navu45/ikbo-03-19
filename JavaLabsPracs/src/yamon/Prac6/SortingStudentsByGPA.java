@@ -21,7 +21,7 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         }
         System.out.println();
 
-        sort(students, 0, students.length - 1);
+        sort(students, 0, students.length);
 
         for (Student student: students){
             System.out.print(student.getName() + " = " + student.getGrade() + " ");
@@ -35,27 +35,5 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         return o1.compareTo(o2);
     }
 
-    public void quickSort(Student[] students, int left, int right)
-    {
-        int l_hold = left; //левая граница
-        int r_hold = right; // правая граница
-        int middle = (left + right) / 2;
-        Student pivot = students[middle];
 
-        while (l_hold < r_hold){
-            while (compare(students[l_hold], pivot) < 0) l_hold++;
-            while (compare(students[r_hold], pivot) > 0) r_hold--;
-
-            if (l_hold < r_hold)
-            {
-                Student temp = students[l_hold];
-                students[l_hold] = students[r_hold];
-                students[r_hold] = temp;
-                l_hold++; r_hold--;
-            }
-        }
-
-        if (left < r_hold) quickSort(students, left, r_hold);
-        if (right > l_hold) quickSort(students, l_hold, right);
-    }
 }

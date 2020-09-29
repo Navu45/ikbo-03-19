@@ -1,9 +1,8 @@
-package yamon.Prac6;
+package yamon.Prac9;
 
 class Student implements Comparable<Student>{
-    private int ID;
-    private String name;
-    private int grade;
+    private final String name;
+    private final int grade;
 
     @Override
     public int compareTo(Student o) {
@@ -11,20 +10,9 @@ class Student implements Comparable<Student>{
         //return Integer.compare(this.ID, o.getID());
     }
 
-    public Student(int ID, String name) {
-        this.ID = ID;
-        this.name = name;
-        grade = 0;
-    }
-
     public Student(String name, int grade) {
         this.name = name;
         this.grade = grade;
-        ID = 0;
-    }
-
-    public int getID() {
-        return ID;
     }
 
     public int getGrade() {
@@ -38,9 +26,9 @@ class Student implements Comparable<Student>{
     @Override
     public String toString() {
         return "Student{" +
-                "ID=" + ID +
-                ", name='" + name + '\'' +
+                " name='" + name + '\'' +
                 ", grade=" + grade +
                 '}';
     }
 }
+
