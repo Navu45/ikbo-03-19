@@ -71,7 +71,10 @@ public class TableOrdersManager implements OrdersManager{
         return count;
     }
 
-    public void add(Order order, int tableNumber) {
+    public void add(Order order, int tableNumber) throws OrderAlreadyAddedException {
+        if (orders[tableNumber] != null) {
+            throw new OrderAlreadyAddedException("Уже есть заказ на этот столик!");
+        }
         orders[tableNumber] = order;
     }
 

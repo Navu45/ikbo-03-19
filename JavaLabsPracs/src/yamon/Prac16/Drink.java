@@ -2,8 +2,14 @@ package yamon.Prac16;
 
 public final class Drink extends Item implements Alcoholable {
 
-    private double alcoholVol;
-    private DrinkTypeEnum type;
+    private final double alcoholVol;
+    private final DrinkTypeEnum type;
+
+    public Drink(double alcoholVol, DrinkTypeEnum type, int price, String name, String description) {
+        super(price, name, description);
+        this.alcoholVol = alcoholVol;
+        this.type = type;
+    }
 
     public DrinkTypeEnum getType() {
         return type;
