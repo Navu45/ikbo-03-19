@@ -4,6 +4,6 @@ public interface OrdersManager {
     int itemsQuantity(String itemName);
     int itemsQuantity(Item item);
     Order[] getOrders();
-    Order[] ordersQuantity();
+    int ordersQuantity();
     int ordersCostSummary();
 }

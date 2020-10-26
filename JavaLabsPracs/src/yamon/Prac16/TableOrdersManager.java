@@ -9,7 +9,13 @@ public class TableOrdersManager implements OrdersManager{
 
     @Override
     public Order[] getOrders() {
-        return orders;
+        ArrayList<Order> orders = new ArrayList<>();
+        for (Order currentTable :
+                this.orders) {
+            if (currentTable != null)
+                orders.add(currentTable);
+        }
+        return (Order[]) orders.toArray();
     }
 
     @Override
@@ -54,14 +60,15 @@ public class TableOrdersManager implements OrdersManager{
     }
 
     @Override
-    public Order[] ordersQuantity() {
-        ArrayList<Order> orders = new ArrayList<>();
+    public int ordersQuantity() {
+        int count = 0;
         for (Order currentTable :
-                this.orders) {
-            if (currentTable != null)
-                orders.add(currentTable);
+                orders) {
+            if (currentTable != null) {
+                count++;
+            }
         }
-        return (Order[]) orders.toArray();
+        return count;
     }
 
     public void add(Order order, int tableNumber) {

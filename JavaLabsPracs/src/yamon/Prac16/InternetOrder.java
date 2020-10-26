@@ -2,6 +2,7 @@ package yamon.Prac16;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class InternetOrder implements Order{
@@ -218,6 +219,7 @@ public class InternetOrder implements Order{
         while (it.hasNext()) {
             list.add(it.next().value);
         }
+        list.sort(Comparator.comparingInt(Item::getPrice));
         return list.toArray(new Item[0]);
     }
 
