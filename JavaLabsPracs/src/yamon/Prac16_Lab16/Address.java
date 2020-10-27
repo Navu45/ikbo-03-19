@@ -1,4 +1,4 @@
-package yamon.Prac16;
+package yamon.Prac16_Lab16;
 
 public final class Address {
     private String cityName;

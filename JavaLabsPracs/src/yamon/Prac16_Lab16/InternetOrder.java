@@ -1,6 +1,5 @@
-package yamon.Prac16;
+package yamon.Prac16_Lab16;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;

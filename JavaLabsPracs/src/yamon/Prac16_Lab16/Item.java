@@ -1,4 +1,4 @@
-package yamon.Prac16;
+package yamon.Prac16_Lab16;
 
 public class Item {
     private final int price;

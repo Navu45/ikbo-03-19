@@ -1,4 +1,4 @@
-package yamon.Prac16;
+package yamon.Prac16_Lab16;
 
 public final class Drink extends Item implements Alcoholable {
 
